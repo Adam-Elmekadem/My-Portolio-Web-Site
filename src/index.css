@@ -1,0 +1,113 @@
+/* Import Tailwind CSS framework - provides all utility classes */
+@import "tailwindcss";
+
+/* Tailwind 4 Custom Colors using CSS Custom Properties */
+:root {
+  --color-luxury-black: #000000;
+  --color-luxury-gray: #1a1a1a;
+  --color-luxury-white: #ffffff;
+  --color-luxury-silver: #c0c0c0;
+}
+
+/* Universal selector (*) applies these styles to ALL elements on the page */
+/* These are browser optimization styles that improve text rendering quality */
+* {
+  /* Prevents browsers from artificially creating bold/italic versions of fonts */
+  /* This ensures you only get the actual font weights that are available */
+  font-synthesis: none;
+  
+  /* Optimizes text rendering for better readability and sharpness */
+  /* Makes text look clearer and more crisp on all devices */
+  text-rendering: optimizeLegibility;
+  
+  /* Smooths font rendering on WebKit browsers (Chrome, Safari, Edge) */
+  /* Reduces jagged edges on text for a cleaner appearance */
+  -webkit-font-smoothing: antialiased;
+  
+  /* Smooths font rendering specifically on macOS browsers */
+  /* Provides consistent text appearance across different operating systems */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling pour toute la page */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Sets a default font family for the entire document */
+  /* This will apply to all text unless overridden by more specific styles */
+  font-family: 'Titillium Web', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Classes pour l'effet de flip 3D des cartes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Effets luxueux noir et blanc pour les cartes */
+.luxury-card-black:hover {
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.2),
+    0 0 60px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.luxury-card-white:hover {
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.bg-luxury-black {
+  background-color: var(--color-luxury-black);
+}
+
+.bg-luxury-gray {
+  background-color: var(--color-luxury-gray);
+}
+
+.bg-luxury-white {
+  /* Applies the bright purple color defined in CSS variables */
+  background-color: var(--color-bright-purple);
+  background-color: var(--color-luxury-white);
+}
+
+.text-luxury-black {
+  color: var(--color-luxury-black);
+}
+
+.text-luxury-gray {
+  color: var(--color-luxury-gray);
+}
+
+.text-luxury-white {
+  color: var(--color-luxury-white);
+}
+
+.text-luxury-silver {
+  color: var(--color-luxury-silver);
+}
+
+/* Effet de luxe avec gradient subtil */
+.luxury-gradient {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+

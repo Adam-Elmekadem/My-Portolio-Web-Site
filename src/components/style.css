@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-orbit {
+    animation: orbit 20s linear infinite;
+  }
+  
+  .animate-orbit-reverse {
+    animation: orbit-reverse 25s linear infinite;
+  }
+  
+  .animate-orbit-slow {
+    animation: orbit 30s linear infinite;
+  }
+
+  .font-rouge-script {
+    font-family: 'Rouge Script', cursive;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-reverse {
+  0% {
+    transform: rotate(0deg) translateX(150px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg) translateX(150px) rotate(360deg);
+  }
+}
+
+.font-caveat {
+  font-family: 'Caveat', cursive;
+}
+
+.font-rouge-script {
+  font-family: 'Rouge Script', cursive;
+}
