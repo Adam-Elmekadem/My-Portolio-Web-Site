@@ -1,2 +1,68 @@
+@keyframes neon-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px 2px #fff, 0 0 24px 8px #fff, 0 0 40px 16px #e0eaff;
+    filter: brightness(1.2);
+  }
+  50% {
+    box-shadow: 0 0 16px 4px #fff, 0 0 48px 16px #b5eaff, 0 0 80px 32px #e0eaff;
+    filter: brightness(1.5);
+  }
+}
+
+/* Luxury neon effect for small stars */
+.neon-star-glow {
+  box-shadow:
+    0 0 6px 2px #fff,
+    0 0 16px 6px #b5eaff,
+    0 0 32px 12px #e0eaff,
+    0 0 2px 1px #fff;
+  animation: neon-glow 2.5s infinite alternate;
+  transition:
+    box-shadow 0.35s cubic-bezier(.4,2,.6,1),
+    filter 0.35s cubic-bezier(.4,2,.6,1),
+    transform 0.35s cubic-bezier(.4,2,.6,1),
+    opacity 0.35s cubic-bezier(.4,2,.6,1);
+}
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.7; transform: scale(1) translateY(0); }
+  50% { opacity: 1; transform: scale(1.3) translateY(-4px); }
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle 3s infinite ease-in-out;
+  transition:
+    box-shadow 0.35s cubic-bezier(.4,2,.6,1),
+    filter 0.35s cubic-bezier(.4,2,.6,1),
+    transform 0.35s cubic-bezier(.4,2,.6,1),
+    opacity 0.35s cubic-bezier(.4,2,.6,1);
+}
+/* Smooth hover for star (ball) elements */
+.lux-star {
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  min-height: 6px;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow:
+    0 0 8px 2px #fff,
+    0 0 16px 4px #b5eaff,
+    0 0 24px 8px #e0eaff;
+  animation: neon-glow 2.5s infinite alternate, star-twinkle 3s infinite ease-in-out;
+  transition:
+    box-shadow 0.35s cubic-bezier(.4,2,.6,1),
+    filter 0.35s cubic-bezier(.4,2,.6,1),
+    transform 0.35s cubic-bezier(.4,2,.6,1),
+    opacity 0.35s cubic-bezier(.4,2,.6,1);
+}
+.lux-star:hover, .lux-star:focus {
+  box-shadow:
+    0 0 16px 4px #fff,
+    0 0 32px 8px #b5eaff,
+    0 0 48px 16px #e0eaff;
+  filter: brightness(1.5) saturate(1.2);
+  transform: scale(1.5) translateY(-2px);
+  opacity: 1;
+}
 /* App.css - Cleaned for Tailwind CSS compatibility */
 /* Only keep styles that are absolutely necessary and don't conflict with Tailwind */

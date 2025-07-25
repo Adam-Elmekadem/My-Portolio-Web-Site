@@ -1,0 +1,7 @@
+tunnel: AdamElmekadem-Portfolio
+credentials-file: C:\Users\DELL\.cloudflared\36cb4540-bcc0-4db3-8126-7316cc9dce2c.json
+
+ingress:
+  - hostname: adamelmekadem-portfolio.adamelmekadem.com
+    service: http://localhost:5174
+  - service: http_status:404

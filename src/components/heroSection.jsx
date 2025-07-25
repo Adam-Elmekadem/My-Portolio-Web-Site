@@ -76,7 +76,6 @@ export default function HeroSection() {
             }
         });
 
-        // Cleanup
         return () => {
             cards.forEach((card) => {
                 if (card) {
@@ -90,43 +89,43 @@ export default function HeroSection() {
     
     return (
         <main className="flex-1 bg-black" id="home">
-            <section className="h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center px-26 gap-16">
-                <div className="text-white w-3/5 flex flex-col justify-center pr-16">
-                    <h1 ref={titleRef} className="text-5xl font-bold text-white leading-tight">Turning Ideas into Visual Stories</h1>
-                    <p ref={paragraphRef} className="mt-4 text-lg text-gray-300">I'm <span className="text-white font-bold border-b-2 border-white animate-pulse">Adam Elmekadem</span>, a graphic designer and web developer from Morocco.
-                            I create clean, creative visuals and bring ideas to life through design and code.</p>
+            <section className="h-screen bg-gradient-to-br from-black via-gray-900 to-black flex flex-col md:flex-row items-center justify-center px-4 md:px-26 gap-10 md:gap-16">
+                <div className="text-white w-full md:w-3/5 flex flex-col justify-center items-center md:items-start text-center md:text-left md:pr-16">
+                    <h1 ref={titleRef} className="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight">Turning Ideas into Visual Stories</h1>
+                    <p ref={paragraphRef} className="mt-4 text-sm sm:text-base md:text-lg text-gray-300">I'm <span className="text-white font-bold border-b-2 border-white animate-pulse">Adam Elmekadem</span>, a graphic designer and web developer from Morocco.
+                        I create clean, creative visuals and bring ideas to life through design and code.</p>
 
-                    <div ref={socialRef} className="mt-8">
-                        <h4 className="text-xl font-semibold flex items-center gap-2 text-white">
+                    <div ref={socialRef} className="mt-8 w-full flex flex-col items-center md:items-start">
+                        <h4 className="text-base sm:text-lg md:text-xl font-semibold flex items-center gap-2 text-white justify-center md:justify-start">
                             <ExternalLink className="w-5 h-5" />
                             My Social Media
                         </h4>
-                        <ul className="list-inside flex space-x-6 mt-4">
+                        <ul className="list-inside flex flex-col md:flex-row w-full md:w-auto space-y-3 md:space-y-0 md:space-x-6 mt-4">
                             <li>
                                 <a href="https://www.linkedin.com/in/adam-elmekadem" 
                                    target="_blank" 
                                    rel="noopener noreferrer" 
-                                   className="text-gray-300 hover:text-white transition-all duration-300 flex items-center gap-2 group px-4 py-2 rounded-lg border border-gray-600 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:bg-white/10 backdrop-blur-sm">
+                                   className="text-gray-300 hover:text-white transition-all duration-300 flex flex-row items-center justify-center gap-2 group px-4 py-2 rounded-lg border border-gray-600 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:bg-white/10 backdrop-blur-sm max-w-xs mx-auto md:w-auto text-center">
                                     <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                                    <span className="hover:underline font-medium">LinkedIn</span>
+                                    <span className="hover:underline font-medium text-center">LinkedIn</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://github.com/adam-elmekadem" 
                                    target="_blank" 
                                    rel="noopener noreferrer" 
-                                   className="text-gray-300 hover:text-white transition-all duration-300 flex items-center gap-2 group px-4 py-2 rounded-lg border border-gray-600 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:bg-white/10 backdrop-blur-sm">
+                                   className="text-gray-300 hover:text-white transition-all duration-300 flex flex-row items-center justify-center gap-2 group px-4 py-2 rounded-lg border border-gray-600 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:bg-white/10 backdrop-blur-sm max-w-xs mx-auto md:w-auto text-center">
                                     <Github className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                                    <span className="hover:underline font-medium">GitHub</span>
+                                    <span className="hover:underline font-medium text-center">GitHub</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://dribbble.com/adam-elmekadem" 
                                    target="_blank" 
                                    rel="noopener noreferrer" 
-                                   className="text-gray-300 hover:text-white transition-all duration-300 flex items-center gap-2 group px-4 py-2 rounded-lg border border-gray-600 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:bg-white/10 backdrop-blur-sm">
+                                   className="text-gray-300 hover:text-white transition-all duration-300 flex flex-row items-center justify-center gap-2 group px-4 py-2 rounded-lg border border-gray-600 hover:border-white hover:shadow-lg hover:shadow-white/25 hover:bg-white/10 backdrop-blur-sm max-w-xs mx-auto md:w-auto text-center">
                                     <Dribbble className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                                    <span className="hover:underline font-medium">Dribbble</span>
+                                    <span className="hover:underline font-medium text-center">Dribbble</span>
                                 </a>
                             </li>
                         </ul>
@@ -134,7 +133,7 @@ export default function HeroSection() {
                 </div>
                 
                 
-                <div className="w-2/5 flex items-center justify-center pl-8">
+                <div className="hidden md:flex w-full md:w-2/5 items-center justify-center md:pl-8 mb-10 md:mb-0">
                     <div className="relative w-full max-w-lg mx-auto h-80">
                         <div ref={card1Ref} className="absolute top-16 left-0 cursor-pointer">
                             <img src={simple} alt="Portfolio Image 1" 

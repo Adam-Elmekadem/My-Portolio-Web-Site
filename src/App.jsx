@@ -1,8 +1,10 @@
+import BlogSection from './components/BlogSection';
 
 import Navbar from './components/Navbar.jsx';
 import HeroSection from './components/heroSection.jsx';
 import Skills from './components/skills.jsx';
-import States from './practicing/Sates.jsx';
+import ProjectsSection from './components/ProjectsSection.jsx';
+import ContactSection from './components/ContactSection.jsx';
 
 export default function App() {
     return (
@@ -10,7 +12,9 @@ export default function App() {
         <Navbar />
         <HeroSection />
         <Skills />
-        {/* <States /> */}
+        <ProjectsSection />
+        <BlogSection />
+        <ContactSection />
       </div>
     )
 }
